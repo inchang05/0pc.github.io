@@ -6,7 +6,7 @@ MAIN PAGE
 </head>
 <body>
   <script>
-    document.write('(+PHP) This is the website for Yeocheon Middle School Programming C Autonomous Club.'+window.location.href.split('?')[1])
+    document.write('(index.php) This is the website for Yeocheon Middle School Programming C Autonomous Club.'+window.location.href.split('?')[1])
   </script>
   <?php
     echo "php-test";
