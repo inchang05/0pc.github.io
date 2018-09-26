@@ -1,4 +1,9 @@
 <script>
+function mod95(x){
+x%=95
+if(x>=0)return x
+return x+95
+}
 function dec(cipher,key){
 document.write('Begin function<br>')//
 var plain=''
@@ -13,7 +18,7 @@ return plain
 }
 var text=[90,91,92,93,94]
 var key=prompt('Input key.')
-document.write('09-26 17:<br>')//
+document.write('09-26 17:58<br>')//
 document.write(text+'<br>'+key+'<br>')//
 document.write(dec(text,key))
 </script>
