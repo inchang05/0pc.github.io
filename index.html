@@ -8,16 +8,20 @@ MAIN PAGE
   <script>
     var u=window.location.href.split('?')
     var p=u[1]
-    function main(){
-      document.write('This is the website for Yeocheon Middle School Programming C Autonomous Club.')
+    function main(page){
+      switch(page){
+        case 'main': document.write('This is the website for Yeocheon Middle School Programming C Autonomous Club.')
+        break
+        case 'test': document.write('This is the test page.')
+      }
     }
     if(u.length==1){
-      main()
+      main('main')
     }
     else{
-      
+      main(p)
     }
   </script>
-Last edit: 2018-09-29T16:08
+Last edit: 2018-10-04T00:37
 </body>
 </html>
