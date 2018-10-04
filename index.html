@@ -6,22 +6,22 @@ MAIN PAGE
 </head>
 <body>
   <script>
-    var u=window.location.href.split('?')
-    var p=u[1]
+    var u=window.location.href.split('?');
+    var p=u[1];
+    var dict={
+    'main':'This is the website for Yeocheon Middle School Programming C Autonomous Club.'
+    }
     function main(page){
-      switch(page){
-        case 'main': document.write('This is the website for Yeocheon Middle School Programming C Autonomous Club.')
-        break
-        case 'test': document.write('This is the test page.')
-      }
+      if(page!='main')document.write('<input type="button" onclick="main(\'main\')" value="Go to the main page!"/>');
+      document.write(dict[page]);
     }
     if(u.length==1){
-      main('main')
+      main('main');
     }
     else{
-      main(p)
+      main(p);
     }
   </script>
-Last edit: 2018-10-04T00:37
+Last edit: 2018-10-05T20:11
 </body>
 </html>
