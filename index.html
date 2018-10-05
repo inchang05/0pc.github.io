@@ -1,27 +1,29 @@
 <html>
 <head>
 <title>
-MAIN PAGE
+Programming C (Yeocheon Middle School)
 </title>
 </head>
 <body>
+<p id="con"></p>
   <script>
     var u=window.location.href.split('?');
     var p=u[1];
     var dict={
-    'main':'This is the website for Yeocheon Middle School Programming C Autonomous Club.'
+    'main':'<h2>Main Page</h2>여천중학교 프로그래밍 C 자율동아리<br><a href="javascript:f(\'problem\');">문제 보기</a>'
+    'problem':'<h2>Problems</h2>This is the list of the problems: B류 회원 승진 시험 문제'
     }
-    function main(page){
+    function f(page){
       if(page!='main')document.write('<input type="button" onclick="main(\'main\')" value="Go to the main page!"/>');
-      document.write(dict[page]);
+      document.getElementById("con").innerHTML=dict[page];
     }
     if(u.length==1){
-      main('main');
+      f('main');
     }
     else{
-      main(p);
+      f(p);
     }
   </script>
-Last edit: 2018-10-0T20:13
+Last edit: 2018-10-05T18:44
 </body>
 </html>
