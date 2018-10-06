@@ -5,16 +5,19 @@ Programming C (Yeocheon Middle School)
 </title>
 </head>
 <body>
+<input type="button" onclick="f('main');" value="Go to the main page!"/>
 <p id="con"></p>
   <script>
     var u=window.location.href.split('?');
     var p=u[1];
     var dict={
-    'main':'<h2>Main Page</h2>여천중학교 프로그래밍 C 자율동아리<br><a href="javascript:f(\'problem\');">문제 보기</a>'
-    'problem':'<h2>Problems</h2>This is the list of the problems: B류 회원 승진 시험 문제'
+    'main':'<h2>Main Page</h2>여천중학교 프로그래밍 C 자율동아리<br><a href="javascript:f(\'problem\');">문제 보기</a>',
+    'problem':'<h2>Problems</h2>This is the list of the problems: B류 회원 승진 시험 문제(<a href="javascript:f(\'B1\');">제1회</a>, <a href="javascript:f(\'B2\');">제2회</a>, <a href="javascript:f(\'B3\');">제3회</a>)',
+    'B1':'',
+    'B2':'',
+    'B3':''
     }
     function f(page){
-      if(page!='main')document.write('<input type="button" onclick="main(\'main\')" value="Go to the main page!"/>');
       document.getElementById("con").innerHTML=dict[page];
     }
     if(u.length==1){
@@ -24,6 +27,6 @@ Programming C (Yeocheon Middle School)
       f(p);
     }
   </script>
-Last edit: 2018-10-05T18:44
+Last edit: 2018-10-06T13:12
 </body>
 </html>
